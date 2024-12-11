@@ -1,11 +1,22 @@
 #include <stdio.h>
-int main (){
-    int n , sum ;
-    printf ("moi nhap vao so bst ky");
-    scanf ("%d",&n);
-    for (int i = n ; i >= 1 ; i--){
+
+int tinhGiaiThua(int n) {
+    int sum = 1;
+    for (int i = n; i >= 1; i--) {
         sum *= i;
     }
-    printf ("giai thua cua %d la %d ",n,sum);
+    return sum;
+}
+
+int main() {
+    int n;
+
+    printf("Mời nhập vào số bất kỳ: ");
+    scanf("%d", &n);
+
+    int giaiThua = tinhGiaiThua(n);
+
+    printf("Giai thừa của %d là %d\n", n, giaiThua);
+
     return 0;
 }
